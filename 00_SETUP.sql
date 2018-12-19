@@ -1,8 +1,10 @@
 CREATE DATABASE IF NOT EXISTS ZIMPLIFY ;
 
-CREATE USER 'zimplidba'@'localhost' IDENTIFIED BY 'Z1mPlidB@';
+CREATE USER 'zimplidba'@'localhost' IDENTIFIED BY 'ZimplifyDBA';
 CREATE USER 'zimplidev'@'192.168.56.%' IDENTIFIED BY 'Z1mPid*V';
 CREATE USER 'zimplify'@'192.168.56.%' IDENTIFIED BY 'Z1mPlify';
+
+USE ZIMPLIFY;
 
 -- FOR LOCAL ACCESS FOR DBA
 GRANT ALL ON ZIMPLIFY TO 'zimplidba'@'localhost';
