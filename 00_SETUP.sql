@@ -1,8 +1,8 @@
 CREATE DATABASE ZIMPLIFY;
 
-CREATE USER 'zimplidba'@'localhost' IDENTIFY WITH sha256_password BY 'Z1mPlidB@';
-CREATE USER 'zimplidev'@'192.168.56.%' IDENTIFY WITH sha256_password BY 'Z1mPid*V';
-CREATE USER 'zimplify'@'192.168.56.%' IDENTIFY WITH sha256_password BY 'Z1mPlify';
+CREATE USER 'zimplidba'@'localhost' IDENTIFY BY 'Z1mPlidB@';
+CREATE USER 'zimplidev'@'192.168.56.%' IDENTIFY BY 'Z1mPid*V';
+CREATE USER 'zimplify'@'192.168.56.%' IDENTIFY BY 'Z1mPlify';
 
 -- FOR LOCAL ACCESS FOR DBA
 GRANT ALL ON ZIMPLIFY TO 'zimplidba'@'localhost';
