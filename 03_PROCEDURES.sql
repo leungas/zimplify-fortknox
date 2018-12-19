@@ -1,16 +1,13 @@
 USE ZIMPLIFY;
 
-DELIMITER $$;
+DELIMITER $$
 
 CREATE PROCEDURE ZDP_SYOB_SET (ID VARCHAR(1024), DT JSON) 
 BEGIN
     INSERT INTO ZIMPLIFY_OBJECTS(SYOB_ID, SYOB_DATA) 
         VALUES (ID, DT)
         ON DUPLICATE KEY 
-            UPDATE ZIMPLIFY_OBJECTS
-                SYOB_DATA = DT 
-            WHERE 
-                SYOB_ID = ID;
+            UPDATE SYOB_DATA = DT;
 END;
 $$
 
@@ -25,10 +22,7 @@ BEGIN
     INSERT INTO ZIMPLIFY_DOCUMENTS(DCOB_ID, DCOB_DATA) 
         VALUES (ID, DT)
         ON DUPLICATE KEY 
-            UPDATE ZIMPLIFY_DOCUMENTS
-                DCOB_DATA = DT 
-            WHERE 
-                DCOB_ID = ID;
+            UPDATE DCOB_DATA = DT;
 END;
 $$
 
@@ -43,10 +37,7 @@ BEGIN
     INSERT INTO ZIMPLIFY_EVENTS(EVOB_ID, EVOB_DATA) 
         VALUES (ID, DT)
         ON DUPLICATE KEY 
-            UPDATE ZIMPLIFY_EVENTS
-                EVOB_DATA = DT 
-            WHERE 
-                EVOB_ID = ID;
+            UPDATE EVOB_DATA = DT;
 END;
 $$
 
@@ -61,10 +52,7 @@ BEGIN
     INSERT INTO ZIMPLIFY_MESSAGES(MGOB_ID, MGOB_DATA) 
         VALUES (ID, DT)
         ON DUPLICATE KEY 
-            UPDATE ZIMPLIFY_MESSAGES
-                MGOB_DATA = DT 
-            WHERE 
-                MGOB_ID = ID;
+            UPDATE MGOB_DATA = DT;
 END;
 $$
 
