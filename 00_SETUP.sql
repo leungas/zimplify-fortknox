@@ -1,9 +1,9 @@
 CREATE DATABASE IF NOT EXISTS ZIMPLIFY ;
 
-CREATE USER 'zimplidba'@'localhost' IDENTIFIED BY 'ZimplifyDBA';
-CREATE USER 'zimplify'@'localhost' IDENTIFIED BY 'Z1mPlify';
-CREATE USER 'zimplidev'@'192.168.56.%' IDENTIFIED BY 'Z1mPid*V';
-CREATE USER 'zimplify'@'192.168.56.%' IDENTIFIED BY 'Z1mPlify';
+CREATE USER 'zimplidba'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ZimplifyDBA';
+CREATE USER 'zimplify'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Z1mPlify';
+CREATE USER 'zimplidev'@'192.168.56.%' IDENTIFIED WITH mysql_native_password BY 'Z1mPid*V';
+CREATE USER 'zimplify'@'192.168.56.%' IDENTIFIED WITH mysql_native_password BY 'Z1mPlify';
 
 USE ZIMPLIFY;
 
